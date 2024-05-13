@@ -28,6 +28,8 @@ SET(OpenMVS_USE_FAST_CBRT OFF CACHE BOOL "Use an optimized code to compute the c
 SET(OpenMVS_USE_SSE ON CACHE BOOL "Enable SSE optimizations")
 SET(OpenMVS_MAX_CUDA_COMPATIBILITY OFF CACHE BOOL "Build for maximum CUDA device compatibility")
 SET(OpenMVS_ENABLE_TESTS ON CACHE BOOL "Enable test code")
+SET(OpenMVS_ENABLE_TESTS ON CACHE BOOL "Enable test code")
+SET(CMAKE_TOOLCHAIN_FILE "${CMAKE_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE PATH "The path of vcpkg cmake scripts")
 
 # Load automatically VCPKG toolchain if available
 IF(NOT DEFINED CMAKE_TOOLCHAIN_FILE AND DEFINED ENV{VCPKG_ROOT})
