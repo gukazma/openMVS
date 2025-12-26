@@ -3077,10 +3077,12 @@ bool TImage<TYPE>::Save(const String& fileName) const
 		compression_params.push_back(cv::IMWRITE_JPEG_QUALITY);
 		compression_params.push_back(95);
 	} else
+	#ifdef cv_IMWRITE_JPEGXL_QUALITY
 	if (ext == ".jxl") {
 		compression_params.push_back(cv::IMWRITE_JPEGXL_QUALITY);
 		compression_params.push_back(95);
 	} else
+	#endif
 	if (ext == ".pfm") {
 		if (Base::depth() != CV_32F)
 			return false;
